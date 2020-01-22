@@ -1,0 +1,44 @@
+<html ng-app="cowgorithm">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+
+        <title>Cowgorithms.com - a place to calculate all your cow related stuff</title>
+    </head>
+    <body>
+        <div class="page-container" ng-controller="cowController">
+            <header>
+                <div class="header-image">
+                    <img src='./images/cow.svg' width="64px" height="48px">
+                </div>
+                <div class="header-title">
+                    <span>Cowgorithms</span>
+                </div>
+            </header>
+            <div class="container">
+                <div class="angular-cow">
+                <div class="cow-gerator">
+                    <H2>Cow-Gerator</H2>
+                        <form>
+                            <select ng-change="submitRequest($event)" class="custom-input" placeholder="color" ng-options="color.id as color.label for color in colors"  ng-model="selections.color1">
+                                <option value="">--select color 1--</option>
+                            </select>
+                            <select ng-change="submitRequest($event)" class="custom-input" placeholder="sex" ng-options="color.id as color.label for color in colors" ng-model="selections.color2">
+                                <option value="">--select color 2--</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+                <div id="react-cow"></div>
+            </div>
+        </div>
+    </body>
+    <script src='scripts/react-cow/build/static/js/main.5315414e.chunk.js'></script>
+    <script src='scripts/react-cow/build/static/js/2.600624bb.chunk.js'></script>
+    <script src='scripts/react-cow/build/static/js/runtime-main.44c27e94.js'></script>
+    <script src='scripts/angular-cow/actions.js'></script>
+    <script src='scripts/angular-cow/angular.min.js'></script>
+    <script src='scripts/angular-cow/redux.js'></script>
+    <script src='scripts/angular-cow/ng-redux.min.js'></script>
+    <script src='scripts/angular-cow/app.js'></script>
+</html>
